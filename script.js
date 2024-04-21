@@ -58,7 +58,7 @@ function loadImages(list){
   }
 }
 var gallery = ["arrow_01","arrow_02","face_1","face_2","face_3","face_4","title_screen"]
-var imgtoload = gallery.map((a)=>{"name":a,"url":`images/${a}.png`});
+var imgtoload = gallery.map((a)=>({"name":a,"url":`images/${a}.png`}));
 /*for (i in gallery) {
   imgtoload.push({
     "name":gallery[i],
