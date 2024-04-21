@@ -138,7 +138,9 @@ var creditsshown = false
 setInterval(update, 1000 / FPS);
 
 
-                  
+function bgm(){
+  sounds["music/titlescreen"].play().catch(()=>{showl("soundWarning")});
+}                  
 function update() {
   ctx.fillStyle = "#aaa";
   ctx.font="28px Arial"
@@ -158,8 +160,8 @@ if (isMobile) {
      ctx.fillText(log[i],0,130+i*14);
   }
 } else if (!soundtitlescreenplayed) {
-  sounds["music/titlescreen"].loop = true
-  sounds["music/titlescreen"].play();
+  sounds["music/titlescreen"].loop = true;
+  bgm();
   soundtitlescreenplayed = true;
   t = 0
 } else if(t<FPS*1 && !creditsshown){

@@ -10,13 +10,14 @@
 
 <body onload='
     log.push("main website loaded");
+    document.getElementById("canvas").style["z-index"] = -999;
+    document.getElementById("restartback").style.display="none";
+    document.getElementById("won").style.display="none";
+    document.getElementById("soundWarning").style.display="none";
     document.getElementById("ts").style.display = "none";
     document.getElementById("back").style.display = "none";
     document.getElementById("options").style.display = "none";
     document.getElementById("about").style.display = "none";
-    document.getElementById("canvas").style["z-index"] = -999;
-    document.getElementById("restartback").style.display="none";
-    document.getElementById("won").style.display="none";
     MAINLOAD()
   '>
   <canvas id="canvas"></canvas><br>
@@ -65,6 +66,12 @@
   <input type="button" name="button" value="save" onClick="testResults(this.form)" class="button"><br>
       for now these are all of the options (sorry)
   </form>
+  </span>
+  <span id="soundWarning" class="menu">
+    <h2>USER INPUT REQUIRED</h2><br>
+    because of how modern web browsers do their stuff, sound doesn't automatically play.<br>
+    please click this button to allow sound to be used.<br>
+    <button onclick="hidel('soundWarning');bgm();">continue</button>
   </span>
   <span id="about" class="menu">
     <h2>ABOUT</h2><br>
