@@ -3,7 +3,7 @@ function MAINLOAD(){
   sounds[`${playlist[i]}`] = new Audio(`${playlistdir}/${playlist[i]}.${playlistfile[i]}`);
     log.push(`loaded file /sounds/${playlist[i]}.ogg`);
 }
-  fetch("/f.json")
+  fetch("f.json")
   .then(data => data.text())
   .then(body => {
     log.push("loaded file /f.json");
@@ -11,7 +11,7 @@ function MAINLOAD(){
     for (a = 0; a < (ee.length); a++) {
       if (ee[a]) {
         (function (ee, a) {
-          fetch("/js/" + (ee[a]))
+          fetch("js/" + (ee[a]))
             .then(data => data.text())
             .then(body => {
               (function (body) {
